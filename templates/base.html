@@ -1,24 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static "app.css" %}">
-    <title>
-        {% block title %}
-        {% endblock title %}
-    </title>
+    <title>{% block title %} {% endblock title %}</title>
 
-    {% block css_files %}
-    {% endblock css_files %}
+    {% block css_files %} {% endblock css_files %}
+  </head>
 
-</head>
-
-<body>
-
-    {% block content %}
-    {% endblock content %}
-    
-</body>
+  <body>
+    <header id="main-navigation">
+      <h1><a href="">Ahmad's Blog</a></h1>
+      <nav>
+        <a href="">All Posts</a>
+      </nav>
+    </header>
+    {% block content %} {% endblock content %}
+  </body>
 </html>
