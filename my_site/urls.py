@@ -22,4 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("blog.urls"))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # first url which it should show to the outside world and then the concrete folder from where images are server
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
+  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+ # first url which it should show to the outside world and then the concrete folder from where images are server
